@@ -57,10 +57,10 @@ First install at least Python 3.9 and the following dependencies:
 - pandas
 
 Run "`convert_cs1-radio_to_cs2.py`" with options:
-- `-i` or `--input="path"` [default=""]
-  - Path to files to operate on. Wildcards can be applied e.g. -i 'C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Radio\Music\', [default=]."
+- `-i` or `--input="path"` [default="C:/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Radio/Music/"]
+  - Path to files to operate on.
 - `-o` or `--output="path"` [default="./out/"]
-  -  Path to output of files [default='out\']
+  -  Path to output of files.
 - `-v`
   - Enable verbose output.
 
@@ -78,3 +78,25 @@ Run "`convert_cs1-radio_to_cs2.py`" with options:
 - Track numbers for each track
 - Additional meta data for each tack
 - Album art
+
+## convert_ogg_to_mp3.py
+Automatically converts .ogg files to .mp3, keeping tags.
+
+### How to use
+Install at least Python 3.9. No additional dependencies.
+
+Run "`convert_ogg_to_mp3.py`" with options:
+- `-i` or `--input="path"` [default=*.ogg]
+  - Path to files to operate on. Wildcards can be applied."
+- `-o` or `--output="path"` [default="./out/"]
+  -  Path to output of files [default='out\']
+- `-f` or `--ffmepg="path"` [default=%FFMPEG%]
+  - Path to where on the system the ffmpeg binaries are located.
+- `-v`
+  - Enable verbose output.
+
+### Example
+> `convert_ogg_to_mp3.py -v -i "out" -o "outmp3`
+
+### Missing functionality/content
+- Proper error checking etc...

@@ -9,13 +9,13 @@ from shutil import SameFileError
 
 def getOpts(argv):
     # Set some output defaults
-    inputPath = ""
+    inputPath = r"C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Radio\Music"
     outputPath = "out"
     verbose=False
 
     # Check command line args, and if available, override the defaults
     try:
-        opts, args = getopt.getopt(argv, "hi:o:v", ["input=", "output=", "ffmpeg="])
+        opts, args = getopt.getopt(argv, "hi:o:v", ["input=", "output="])
     except getopt.GetoptError:
         print(r"convert_cs1-radio_to_cs2.py [-i <inputPath>] [-o <outputPath>] [-v]")
         sys.exit(2)
@@ -43,7 +43,7 @@ def printHelp():
     print(r"Command-line options:")
     print(r"-i path")
     print(r"--input=path")
-    print(r"    Path to files to operate on. Wildcards can be applied e.g. -i 'C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Radio\Music\', [default=].")
+    print(r"    Path to files to operate on. [default='C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Radio\Music'].")
     print(r"")
     print(r"-o path")
     print(r"--output=path")
@@ -183,7 +183,7 @@ def main(argv):
     inputPath = os.path.normpath(inputPath)
     outputPath = os.path.normpath(outputPath)
 
-    # If input path does not exist, create it
+    # If input path does not exist, exit early
     if not os.path.exists(inputPath):
         print(f"Input path '{inputPath}' does not exist.")
         sys.exit(2)
