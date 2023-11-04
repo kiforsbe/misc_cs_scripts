@@ -69,10 +69,12 @@ Run "`convert_cs1-radio_to_cs2.py`" with options:
 
 ### Missing functionality/content
 - A number of Music Pack DLCs (see above)
-- Track numbers for each track
-- Additional meta data for each tack
-- Album art
+- Conversion of Cities Skylines 1 radio blurbs to Cities Skylines 2
+- Conversion of Cities Skylines 1 radio talk to Cities Skylines 2
 - Cities Skylines 2 radio network art/icon
 - Cities Skylines 2 radio channel art/icon
 - Cities Skylines 2 radio channel description
 - Cities Skylines 2 radio channel playlist length
+- Track numbers for each track
+- Additional meta data for each tack
+- Album art
