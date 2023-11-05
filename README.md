@@ -64,8 +64,17 @@ Run "`convert_cs1-radio_to_cs2.py`" with options:
 - `-v`
   - Enable verbose output.
 
-### Example
+#### Example
 > `convert_cs1-radio_to_cs2.py -v -i "C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Radio\Music\"`
+
+### Getting the music in-game
+**Warning:** *Making the game unable to find the `"cache.db"` file per steps below will greatly impact your game load time. On my system, it goes from 5-10 seconds, to at least a 50-60 seconds as the cache is rebuilt every time you load the game. If you use this method, make sure you can restore the file without reinstalling the game! If using Steam, you can verify the install, on other platforms, just make sure to keep a copy of it!*
+
+Assuming your installation folder is `"C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II"`, follow the steps below.
+1. Copy the output of the script to `"C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II\Cities2_Data\StreamingAssets\Audio~\Radio"` and 
+2. Rename `"C:\Program Files (x86)\Steam\steamapps\common\Cities Skylines II\Cities2_Data\StreamingAssets\cache.db"` to something else like `"cache.db.old"`.
+
+There might be better methods to get music in-game, but so far I've not found one. Hopefully Colossal Order/Paradox will provide a better mehthod via mods or similar to include additional music content.
 
 ### Missing functionality/content
 - A number of Music Pack DLCs (see above)
