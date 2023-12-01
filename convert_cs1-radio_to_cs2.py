@@ -79,6 +79,7 @@ def copyAndTagTracks(dfMapping: pd.DataFrame, inputPath: str, outputPath: str, v
                 # Update tags
                 track = mutagen.File(destFileFullPath)
                 track["album"] = f"Cities Skylines: {row['Album']}"
+                track["compilation"] = "1"
                 track["radio channel"] = row['Album']
                 track["artist"] = row['Artist']
                 track["title"] = row['Title']
