@@ -49,7 +49,7 @@ Not supported stations (due to not having bought them yet):
 | Pop Punk Radio | ? | Paid DLC | 2023-03-22 |
 
 
-*Hint: The tagged music is also prepared for import into your favourite music player/library, with tags like Album, Artist and Title added.*
+**Hint:** *The tagged music is also prepared for import into your favourite music player/library, with tags like Album, Artist and Title added. You can then use the script `convert_ogg_to_mp3.py` to convert the .ogg files to .mp3, with all tags kept!*
 
 ### How to use
 First install at least Python 3.9 and the following dependencies:
@@ -57,12 +57,15 @@ First install at least Python 3.9 and the following dependencies:
 - pandas
 
 Run "`convert_cs1-radio_to_cs2.py`" with options:
-- `-i` or `--input="path"` [default="C:/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Radio/Music/"]
+- `-i` or `--input="path"` [default=`"C:/Program Files (x86)/Steam/steamapps/common/Cities_Skylines/Files/Radio/Music/"`]
   - Path to files to operate on.
-- `-o` or `--output="path"` [default="./out/"]
+- `-o` or `--output="path"` [default=`"./out/"`]
   -  Path to output of files.
 - `-v`
   - Enable verbose output.
+
+
+**Note!** *The script needs the `cs1_to_cs2_mapping.csv` file in the same folder as the script to execute. This file contains the mapping of original files and the appropriate tags and output filenames. If you want to use different mappings of tags, than this is where you can change that.*
 
 #### Example
 > `convert_cs1-radio_to_cs2.py -v -i "C:\Program Files (x86)\Steam\steamapps\common\Cities_Skylines\Files\Radio\Music\"`
@@ -95,11 +98,11 @@ Automatically converts .ogg files to .mp3, keeping tags.
 Install at least Python 3.9. No additional dependencies.
 
 Run "`convert_ogg_to_mp3.py`" with options:
-- `-i` or `--input="path"` [default=*.ogg]
+- `-i` or `--input="path"` [default=`"*.ogg"`]
   - Path to files to operate on. Wildcards can be applied."
-- `-o` or `--output="path"` [default="./out/"]
-  -  Path to output of files [default='out\']
-- `-f` or `--ffmepg="path"` [default=%FFMPEG%]
+- `-o` or `--output="path"` [default=`"./out/"`]
+  -  Path to output of files.
+- `-f` or `--ffmepg="path"` [default=`%FFMPEG%`]
   - Path to where on the system the ffmpeg binaries are located.
 - `-v`
   - Enable verbose output.
